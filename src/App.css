@@ -1,38 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --primary-color: #e70074;
+  --light-gray: #8b8b8b;
+  --light-green: #44b49b;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", serif;
+}
+
 .App {
-  text-align: center;
+  max-width: 1080px;
+  background-color: #fafafa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dropship {
+  margin: 0 0.75rem;
+  border: 0.125rem solid #fff;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+  height: 2.688rem;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dropship h1 {
+  font-size: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dropship .items {
+  margin: 0.75rem 1rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+/*Dropship Switch Section*/
+
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 31px;
+  height: 17px;
+  border-radius: 20px;
+  background: #dfd9ea;
+  transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  vertical-align: middle;
+  cursor: pointer;
+}
+.switch::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 15px;
+  height: 15px;
+  background: #fafafa;
+  border-radius: 50%;
+  transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.switch:active::before {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(128, 128, 128, 0.1);
+}
+.drop-switch-input:checked + .switch {
+  background: var(--primary-color);
+}
+.drop-switch-input:checked + .switch::before {
+  left: 15px;
+  background: #fff;
+}
+.drop-switch-input:checked + .switch:active::before {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(0, 150, 136, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Voucher Code Section*/
+.voucher {
+  margin: 0.75rem 0.75rem;
+  border: 0.125rem solid #fff;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+  min-height: 3.25rem;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.voucher-box {
+  display: flex;
+  width: 100%;
+}
+
+.voucher-tag {
+  height: 2rem;
+  margin: 0.35rem 0.5rem;
+}
+
+.voucher-input {
+  display: inline-block;
+  width: 75%;
+  border: none;
+}
+
+.voucher-btn {
+  width: 15%;
+  margin: 0 0.5rem;
+  background-color: #fff;
+  border: none;
+}
+
+.line-gray {
+  color: var(--light-gray);
+  width: 95%;
+  margin-left: 0.4rem;
+  size: 1px;
+}
+
+/*End of Voucher Code Section*/
+
+.payment-text {
+  margin: 0.75rem 0 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.finish {
+  height: 3.125rem;
+  margin: 0 0.75rem 1.5rem;
+}
+
+.finish-btn {
+  font-size: 1rem;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }

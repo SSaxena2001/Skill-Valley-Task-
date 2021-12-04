@@ -1,0 +1,33 @@
+
+.extend-box{
+    margin: 0.75rem 0.75rem;
+    border: 0.125rem solid #fff;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    min-height: 4.688rem;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.next-arrow{
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.extend-box-items{
+    margin: 0.75rem 1rem;
+}
+
+.even-space-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.option-title {
+    font-size: 1rem;
+    font-family: 'Roboto', serif;
+}
+
+.option-para {
+    color: var(--light-gray);
+}
